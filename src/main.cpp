@@ -5595,8 +5595,8 @@ bool static ProcessMessage(CNode* pfrom, string strCommand, CDataStream& vRecv, 
                     }
                 }
 
-                // Only process the packet if we are an exchange capable node, a servicenode, or xrouter node
-                if (app.isEnabled() || GetBoolArg("-xrouter", false))
+                // Only process the packet if we are an exchange capable node
+                if (app.isEnabled())
                 {
                     CValidationState state;
 
